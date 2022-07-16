@@ -1,0 +1,44 @@
+{
+    "name": "websystem/tags",
+    "description": "Add tags and taggable behaviour to your Laravel app",
+    "keywords": [
+        "websystem",
+        "laravel-tags"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Websystem\\Tags\\": "src"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "homepage": "https://github.com/WebSystem-studio/Laravel-tags",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Halaj",
+            "email": "m.halaj@websystem.sk",
+            "homepage": "https://websystem.sk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^9.18",
+        "illuminate/support": "^9.18"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10",
+        "orchestra/testbench": "^7.6"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
