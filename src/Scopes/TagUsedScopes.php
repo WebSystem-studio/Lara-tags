@@ -1,6 +1,6 @@
 <?php
 
-namespace Websystem\Tagg\Models;
+namespace Websystem\Tags\Scopes;
 
 trait TagUsedScopes
 {
