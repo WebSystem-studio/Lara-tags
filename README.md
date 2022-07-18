@@ -12,21 +12,18 @@ Run the Composer require command from the Terminal:
 
     composer require websystem/tags
 
-The final steps for you are to add the service provider of the package and alias the package. To do this open your `config/app.php` file.
-
-`Amalikov\Taggy\TaggyServiceProvider::class`
-
-Go to the terminal in folder that you are migrate the `tags` and `taggable` tables:
-
-```php artisan migrate```
 ## Usage
-Add the `TaggableTrait` trait to a model you like to use `tags` on.
-```
-use Amalikov\Taggy\TaggableTrait;
+Here are some code examples:
 
-class YourEloquentModel extends Model
+```php
+// apply HasTags trait to a model
+use Illuminate\Database\Eloquent\Model;
+use Websystem\Tags\HasTags;
+class Lesson extends Model
 {
-    use TaggableTrait;
+    use HasTags;
+
+    // ...
 }
 ```
 Create a tags data for table that you use for example in controller or whatever place you want:
