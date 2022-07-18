@@ -7,4 +7,4 @@
 ## Installation
 Install the package through [Composer](http://getcomposer.org/).
 Run the Composer require command from the Terminal:
-`composer require websystem/tags`
+    composer require websystem/tags
