@@ -49,7 +49,11 @@ $lesson->tag(['your_tag_name', '...']);
 ## Untag existing tags
 Detaching
 ```php
-$model->untag(['your_tag_name']);
+// detach a tag
+$lesson->untag(['your_tag_name']);
+// detach all tags
+$lesson->untag();
+```
 ```
 
 ## Untag all tags
