@@ -41,6 +41,13 @@
             "tests/stubs/TagStub.php"
         ]
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Websystem\\Tags\\TagsServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
