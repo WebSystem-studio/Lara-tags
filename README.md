@@ -42,9 +42,9 @@ $lesson = Lesson::create([
 ]);
 ```
 ## Set a new tags
-You can set a new tags like this:
+Attaching tags
 ```php
-$model->tag(['your_tag_name']);
+$lesson->tag(['your_tag_name']);
 ```
 ## Untag existing tags
 You can untag existing tag
