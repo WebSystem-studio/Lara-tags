@@ -26,10 +26,10 @@ class Lesson extends Model
     // ...
 }
 ```
-Create a tags data for table that you use for example in controller or whatever place you want:
-```
-use Illuminate\Support\Str;
 
+```php
+use Illuminate\Support\Str;
+// create a model with some tags
 $tags = Tag::create([
  'name' => 'Tag Name',
  'slug' => Str::slug('Tag Name')
