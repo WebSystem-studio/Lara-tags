@@ -28,7 +28,7 @@ class Lesson extends Model
 ```
 
 ```php
-// create a model with some tags
+// create a new tag
 use Illuminate\Support\Str;
 $tags = Tag::create([
  'name' => 'Tag Name',
@@ -36,11 +36,11 @@ $tags = Tag::create([
 ]);
 
 ```
-You just need to pass the data that working with the models
-```
-$model = new YourEloquentModel;
-$model->title = 'Test';
-$model->save();
+```php
+// create a model with some tags
+$lesson = Lesson::create([
+ 'title' => 'Tag Name',
+]);
 ```
 ## Set a new tags
 You can set a new tags like this:
