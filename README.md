@@ -46,7 +46,7 @@ Attaching tags
 ```php
 $lesson->tag(['your_tag_name', '...']);
 ```
-## Untag existing tags
+## Untag 
 Detaching
 ```php
 // detach a tag
@@ -56,7 +56,7 @@ $lesson->untag(['your_tag_name']);
 $lesson->untag();
 ```
 
-## Retag existing tag
+## Retag
 ```php
 $model->retag(['your_tag_name']);
 ````
