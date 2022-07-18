@@ -51,18 +51,12 @@ Detaching
 ```php
 // detach a tag
 $lesson->untag(['your_tag_name']);
+
 // detach all tags
 $lesson->untag();
 ```
-```
-
-## Untag all tags
-
-```
-$model->untag();
-````
 
 ## Retag existing tag
-```
+```php
 $model->retag(['your_tag_name']);
 ````
