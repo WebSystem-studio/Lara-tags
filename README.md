@@ -44,13 +44,13 @@ $lesson = Lesson::create([
 ## Set a new tags
 Attaching tags
 ```php
-$lesson->tag(['your_tag_name']);
+$lesson->tag(['your_tag_name', '...']);
 ```
 ## Untag existing tags
-You can untag existing tag
-```
+Detaching
+```php
 $model->untag(['your_tag_name']);
-````
+```
 
 ## Untag all tags
 
