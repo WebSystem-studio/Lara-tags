@@ -28,8 +28,8 @@ class Lesson extends Model
 ```
 
 ```php
-use Illuminate\Support\Str;
 // create a model with some tags
+use Illuminate\Support\Str;
 $tags = Tag::create([
  'name' => 'Tag Name',
  'slug' => Str::slug('Tag Name')
