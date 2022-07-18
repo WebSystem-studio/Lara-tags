@@ -28,25 +28,24 @@ class Lesson extends Model
 ```
 
 ```php
-// create a new tag
+// create a model tag
 use Illuminate\Support\Str;
 $tags = Tag::create([
  'name' => 'Tag Name',
  'slug' => Str::slug('Tag Name')
 ]);
-
 ```
 ```php
-// create a model with some tags
+// create a model lesson ex.
 $lesson = Lesson::create([
- 'title' => 'Tag Name',
+ 'title' => 'Lesson Title',
 ]);
 ```
 ## Set a new tags
 You can set a new tags like this:
-```
+```php
 $model->tag(['your_tag_name']);
-````
+```
 ## Untag existing tags
 You can untag existing tag
 ```
