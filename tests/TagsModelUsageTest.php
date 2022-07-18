@@ -43,6 +43,45 @@ class TagsModelUsageTest extends TestCase
     /** @test */
     public function can_untag_lesson_tags()
     {
-        //
+        $tags = \TagStub::whereIn('slug', ['laravel', 'php', 'livewire'])->get();
+        $this->lesson->tag($tags);
+        $this->lesson->untag($tags->first());
+        $this->assertCount(2, $this->lesson->tags);
+        foreach (['PHP', 'Livewire'] as $tag) {
+            $this->assertContains($tag, $this->lesson->tags->pluck('name'));
+        }
+    }
+
+    /** @test */
+    public function can_untag_all_lesson_tags()
+    {
+        $tags = \TagStub::whereIn('slug', ['laravel', 'php', 'livewire'])->get();
+        $this->lesson->tag($tags);
+        $this->lesson->untag();
+        $this->lesson->load('tags');
+        $this->assertCount(0, $this->lesson->tags);
+    }
+
+    /** @test */
+    public function can_retag_lesson_tags()
+    {
+        $tags = \TagStub::whereIn('slug', ['laravel', 'php', 'livewire'])->get();
+        $toRetags = \TagStub::whereIn('slug', ['full-stack', 'fun-stuff'])->get();
+        $this->lesson->tag($tags);
+        $this->lesson->retag($toRetags);
+        $this->lesson->load('tags');
+        $this->assertCount(2, $this->lesson->tags);
+        foreach (['Full stack', 'Fun stuff'] as $tag) {
+            $this->assertContains($tag, $this->lesson->tags->pluck('name'));
+        }
+    }
+
+    /** @test */
+    public function non_models_are_filtered_when_using_collection()
+    {
+        $tags = \TagStub::whereIn('slug', ['laravel', 'php', 'livewire'])->get();
+        $tags->push('not a tag model');
+        $this->lesson->tag($tags);
+        $this->assertCount(3, $this->lesson->tags);
     }
 }
