@@ -11,6 +11,10 @@ Install the package through [Composer](http://getcomposer.org/).
 Run the Composer require command from the Terminal:
 
     composer require websystem/tags
+    
+After that, you need to run migrations.
+
+    php artisan migrate
 
 ## Usage
 Here are some code examples:
