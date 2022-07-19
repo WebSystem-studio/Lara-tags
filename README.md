@@ -23,6 +23,7 @@ Here are some code examples:
 // apply HasTags trait to a model
 use Illuminate\Database\Eloquent\Model;
 use Websystem\Tags\HasTags;
+
 class Lesson extends Model
 {
     use HasTags;
@@ -34,6 +35,7 @@ class Lesson extends Model
 ```php
 // create a model tag
 use Illuminate\Support\Str;
+
 $tags = Tag::create([
  'name' => 'Tag Name',
  'slug' => Str::slug('Tag Name')
