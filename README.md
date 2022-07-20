@@ -4,9 +4,11 @@
     <img src="/overview.png" alt="Overview Lara-tags" style="width:70%;">
 </p>
 
+<p align="center">
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/websystem/tags.svg?style=flat-square)](https://packagist.org/packages/websystem/tags)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/websystem/tags.svg?style=flat-square)](https://packagist.org/packages/websystem/tags)
+</p>
 
 ## Installation
 
